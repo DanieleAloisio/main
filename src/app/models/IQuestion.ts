@@ -7,5 +7,5 @@ export interface IQuestion {
   question: string;
   correct_answer: string;
   incorrect_answers: Array<string>;
-  sketchs: IAnswer[];
+  answers: IAnswer[];
 }
