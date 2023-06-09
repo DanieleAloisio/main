@@ -1,11 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { constants, difficulties, endpoint } from 'src/app/utils/costant';
+import { constants, difficulties, endpoint } from "src/app/utils/constants";
 
-@Component({
-  selector: 'app-base',
-  templateUrl: './base.component.html',
-  styleUrls: ['./base.component.css']
-})
 export abstract class BaseComponent {
   public get constants() {
     return constants;
