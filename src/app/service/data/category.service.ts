@@ -1,16 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ICategory } from '../models/ICategory';
-import { IQuestion } from '../models/IQuestion';
+import { Observable } from 'rxjs';
+import { CategoryList } from 'src/app/models/category-list.model';
+import { endpoint } from 'src/app/utils/costant';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class CategoryService {
 
   constructor(private http: HttpClient) { }
 
-  getCategories = () => {
-
-    return this.http.get<ICategory[]>(`https://opentdb.com/api_category.php`) 
+  public getCategories(): Observable<CategoryList> {
+    return this.http.get<CategoryList>(endpoint.external.category);
   }
-
 }

@@ -1,14 +1,18 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { QuestionsFilter } from 'src/app/filters/question-filter';
-import { IQuestion } from 'src/app/models/IQuestion';
+import { QuestionList } from 'src/app/models/question.list';
+import { endpoint } from 'src/app/utils/costant';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class QuestionService {
   constructor(private http: HttpClient) {}
 
-  getQuestions = (filter: QuestionsFilter) => {
-    return this.http.get<IQuestion[]>(`https://opentdb.com/api_category.php`, {
+  public getQuestions(filter: QuestionsFilter): Observable<QuestionList> {
+    return this.http.get<QuestionList>(endpoint.external.questions, {
       params: this.getQueryParams(filter)
     });
   }
