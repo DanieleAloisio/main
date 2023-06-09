@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BaseComponent } from 'src/app/common/base/base/base.component';
+import { BaseComponent } from 'src/app/common/base/base.component';
 import { QuestionsFilter } from 'src/app/filters/question-filter';
 import { Answer } from 'src/app/models/answer.model';
 import { Category } from 'src/app/models/category.model';
