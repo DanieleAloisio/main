@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { SessionData } from 'src/app/models/session-data.model';
 
 @Injectable({
   providedIn: 'root'

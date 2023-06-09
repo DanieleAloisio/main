@@ -2,7 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { QuestionsFilter } from 'src/app/filters/question-filter';
-import { QuestionList } from 'src/app/models/question.list';
+import { QuestionList } from 'src/app/models/question.list.model';
 import { endpoint } from 'src/app/utils/costant';
 
 @Injectable({
